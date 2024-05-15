@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>Mini Calculator</title>
+    <title>Basic mini calculator</title>
 </head>
 <body>
     <input id="num1" type="number" placeholder="number"></input> <br> </br>
@@ -8,11 +8,11 @@
     
     <select id="operation">
         <option value="add">Addition</option>
-        </select>
-    </select>
-    <div id="result"></div> <br> </br>
+        <option value="sub">Subtraction</option>
+        </select> 
+   <div id="result"></div> <br> </br> 
 
-    <button onClick="addSum()">Add</button>
+    <button onClick="addSum()">Calculate</button>
 
     <script>
         function addSum(){
@@ -27,10 +27,14 @@
                     result=num1+num2;
                     break;
 
+                    case 'sub':
+                        result=num1-num2;
+                        break;
+
                     default:
                         result="Error!"
             }
-            document.getElementById('result').textContent='Result:${result}';
+            document.getElementById('result').textContent=`Result: ${result}`;
         }
     </script>
 </body>
